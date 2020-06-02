@@ -7,12 +7,19 @@ namespace GazpromTask
     {
         static void Main(string[] args)
         {
+            //int[,] input = new[,] {
+            //    { 0, 2, 3, 9, 7 },
+            //    { 6, 2, 4, 5, 8 },
+            //    { 8, 9, 1, 2, 8 },
+            //    { 6, 5, 4, 3, 0 },
+            //    { 9, 7, 6, 2, 1 }
+            //};
             int[,] input = new[,] {
-                { 0, 2, 3, 9, 7 },
-                { 6, 2, 4, 5, 8 },
-                { 8, 9, 1, 2, 8 },
-                { 6, 5, 4, 3, 0 },
-                { 9, 7, 6, 2, 1 }
+                { 0, 2, 3, 9, 7, 123 },
+                { 123, 2, 4, 5, 8, 256 },
+                { 123, 9, 1, 2, 8, 123 },
+                { 256, 5, 4, 3, 0, 256 },
+                { 9, 7, 6, 2, 1, 123 }
             };
             Console.WriteLine("Before: \n");
             for (int i = 0; i < input.GetLength(0); i++)
@@ -40,7 +47,7 @@ namespace GazpromTask
         {
             var numbers = new Number[input.GetLength(0), input.GetLength(1)];
 
-            for (int i = 0; i < input.GetLength(1); i++)
+            for (int i = 0; i < input.GetLength(0); i++)
             {
                 var history = new List<int>();
                 ArrayRow<int> row = new ArrayRow<int>(input, i);
@@ -59,7 +66,7 @@ namespace GazpromTask
                 }
             }
 
-            for (int i = 0; i < input.GetLength(0); i++)
+            for (int i = 0; i < input.GetLength(1); i++)
             {
                 var history = new List<int>();
                 ArrayColumn<int> column = new ArrayColumn<int>(input, i);
@@ -71,8 +78,10 @@ namespace GazpromTask
                     int[] indexes = column.IndexesOf(column[j], j);
 
                     foreach (int index in indexes)
-                        if (indexes.Length > 1)
+                        if (indexes.Length > 1)                       
                             numbers[index, i].Multiplier += indexes.Length - 1;
+
+                    history.AddRange(indexes);
                 }
             }
 
