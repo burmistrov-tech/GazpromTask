@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GazpromTask", "GazpromTask\GazpromTask.csproj", "{3588C6E6-189D-4BA4-AE58-EA4FC71361EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3588C6E6-189D-4BA4-AE58-EA4FC71361EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3588C6E6-189D-4BA4-AE58-EA4FC71361EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3588C6E6-189D-4BA4-AE58-EA4FC71361EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3588C6E6-189D-4BA4-AE58-EA4FC71361EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4532EA6-7A89-45CC-9BC6-83DD293CFC07}
+	EndGlobalSection
+EndGlobal
